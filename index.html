@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="left">
+    <div class="widget about-me shadow">
+        <img class="image" src="images/me.jpg" alt="Me">
+        <h1 class="name" itemprop="name">Marco Baumer</h1>
+        <div class="job" itemprop="jobTitle">Junior Business Solution Consultant</div>
+        <div class="location" itemprop="workLocation">Mannheim, Germany</div>
+        <div class="contact">
+            <div class="email" itemprop="email">mbaumer90@gmail.com</div>
+        </div>
+    </div>
+
+    <div class="widget skills shadow" itemscope itemtype="http://schema.org/ItemList">
+        <h3 class="widget-title" itemprop="name">Skills</h3>
+        <ul class="skill-list clearfix">
+            {% for item in site.skills %}
+            <li class="skill" itemprop="itemListElement">{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="right shadow">
+    <h2>Background</h2>
+
+    <section class="experience">
+        <h3>Experience</h3>
+        <ul class="vita-list">
+            {% for item in site.vita %}
+            <li class="entry" itemscope itemtype="http://schema.org/Organization">
+                <div class="period">{{ item.period }}</div>
+                <div class="company" itemprop="name">{{ item.company }}</div>
+                <div class="job">{{ item.job }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="education">
+        <h3>Education</h3>
+        <ul class="vita-list">
+            {% for item in site.education %}
+            <li class="entry" itemscope itemtype="http://schema.org/EducationalOrganization">
+                <div class="period">{{ item.period }}</div>
+                <div class="name" itemprop="name">{{ item.name }}</div>
+                <div class="location" itemprop="location">{{ item.location }}</div>
+                <div class="studies">{{ item.studies }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
