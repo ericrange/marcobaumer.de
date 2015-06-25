@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<div class="left">
+<div class="left clearfix">
+    <div class="widget-container">
     <div class="widget about-me shadow">
         <img class="image" src="images/me.jpg" alt="Me">
         <h1 class="name" itemprop="name">Marco Baumer</h1>
@@ -12,7 +13,8 @@ layout: default
             <div class="email" itemprop="email">mbaumer90@gmail.com</div>
         </div>
     </div>
-
+</div>
+    <div class="widget-container">
     <div class="widget skills shadow" itemscope itemtype="http://schema.org/ItemList">
         <h3 class="widget-title" itemprop="name">Skills</h3>
         <ul class="skill-list clearfix">
@@ -21,6 +23,7 @@ layout: default
             {% endfor %}
         </ul>
     </div>
+</div>
 </div>
 
 <div class="right shadow">

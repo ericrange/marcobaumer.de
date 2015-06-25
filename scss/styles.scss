@@ -1,5 +1,8 @@
 @import "normalize.scss";
 $Color: #DF7401;
+$TabletWidth: 1024px;
+$HandyWidth: 640px;
+$MiniHandy: 500px;
 * {
     font-family: "Open Sans", Arial;
     box-sizing: border-box;
@@ -7,10 +10,17 @@ $Color: #DF7401;
 body {
     background-color: #eee;
     border-top: solid 5px $Color;
-    padding: 50px 0px;
+    padding: 50px;
+    @media all and (max-width: $TabletWidth) {
+        padding: 30px;
+    }
+    @media all and (max-width: $MiniHandy) {
+        padding: 15px;
+    }
 }
 .wrapper {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 ul {
@@ -29,24 +39,68 @@ ul {
 }
 .left {
     float: left;
-    width: 250px;
+    width: 27%;
+    padding-right: 15px;
+    position: relative;
+    @media all and (max-width: $TabletWidth) {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        .widget-container {
+            width: 50%;
+            float: left;
+            padding-right: 15px;
+            &:last-child {
+                padding-right: 0;
+            }
+            &:nth-child(2) {
+                margin-left: 50%;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+    @media all and (max-width: $HandyWidth) {
+        .widget-container {
+            width: 100%;
+            float: none;
+            padding-right: 0;
+            &:nth-child(2) {
+                margin-left: 0;
+                position: static;
+            }
+        }
+    }
     .widget-title {
-        font-weight: normal;
+        text-align: center;
+        border-bottom: dashed 1px #ddd;
+        padding-bottom: 15px;
         font-size: 16px;
     }
     .skills {
         .skill-list {
+            display: flex;
+            flex-wrap: wrap;
             margin-top: 15px;
             .skill {
-                background-color: #eee;
-                padding: 3px 7px;
-                font-size: 11px;
+                background-color: #f1f1f1;
+                padding: 4px 7px;
+                font-size: 12px;
                 float: left;
                 margin-right: 3px;
                 margin-bottom: 3px;
                 border-radius: 3px;
                 line-height: 17px;
                 color: #555;
+                white-space: nowrap;
+                flex-grow: 1;
+                text-align: center;
+                @media all and (max-width: $TabletWidth) {
+                    background-color: #fff;
+                    font-size: 14px;
+                    width: 50%;
+                    margin: 3px 0;
+                }
             }
         }
     }
@@ -79,10 +133,14 @@ ul {
     }
 }
 .right {
-    width: 735px;
-    margin-left: 265px;
+    width: 73%;
+    margin-left: 27%;
     background-color: #fff;
     line-height: 22px;
+    @media all and (max-width: $TabletWidth) {
+        width: 100%;
+        margin-left: 0;
+    }
     > h2 {
         border-bottom: dashed 1px #ddd;
         padding: 15px 30px 12px;
@@ -97,9 +155,8 @@ ul {
         font-size: 16px;
         margin-top: 15px;
     }
-
     .education {
-        .vita-list{
+        .vita-list {
             .entry {
                 &:last-child {
                     padding-bottom: 30px;
@@ -107,14 +164,19 @@ ul {
             }
         }
     }
-
     .vita-list {
         border-left: solid 1px #ddd;
         margin: 0 35px;
         padding-left: 30px;
+        @media all and (max-width: $HandyWidth) {
+            padding-left: 15px;
+        }
         .entry {
             padding-bottom: 15px;
             font-size: 16px;
+            @media all and (max-width: $HandyWidth) {
+                font-size: 14px;
+            }
             &::before {
                 content: "";
                 position: relative;
@@ -128,6 +190,10 @@ ul {
                 float: left;
                 background-color: #fff;
                 margin-right: -9px;
+
+                @media all and (max-width: $HandyWidth) {
+                    left: -20px;
+                }
             }
             &:last-child {
                 padding-bottom: 15px;
