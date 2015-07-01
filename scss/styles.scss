@@ -114,6 +114,7 @@ ul {
             padding: 45px 15px;
             .job {
                 color: $Color;
+                margin-bottom: 15px;
             }
             .name {
                 margin: 15px 0 5px;
@@ -123,7 +124,7 @@ ul {
                 border-radius: 50%;
                 width: 100px;
             }
-            .location {
+            .location, .academic-title {
                 color: #999;
             }
             .email {
