@@ -6,12 +6,12 @@ layout: default
     <div class="widget-container">
     <div class="widget about-me shadow">
         <img class="image" src="images/me.jpg" alt="Me">
-        <h1 class="name" itemprop="name">Marco Baumer</h1>
-        <div class="job" itemprop="jobTitle">Business Solution Consultant</div>
+        <h1 class="name" itemprop="name">{{ site.name }}</h1>
+        <div class="job" itemprop="jobTitle">{{ site.job }}</div>
         <div class="academic-title" itemprop="honorificSuffix">{{ site.honorificSuffix }}</div>
-        <div class="location" itemprop="workLocation">Mannheim, Germany</div>
+        <div class="location" itemprop="workLocation">{{ site.location }}</div>
         <div class="contact">
-            <div class="email" itemprop="email">mbaumer90@gmail.com</div>
+            <div class="email" itemprop="email">{{ site.email }}</div>
         </div>
     </div>
 </div>

@@ -6,20 +6,16 @@ exclude:
   - start.cmd
   - coffee
 
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://eric-range.de" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
 
-# Build settings
+url: "http://marcobaumer.de"
+
 markdown: kramdown
+
+name: Marco Baumer
+email: mbaumer90@gmail.com
+location: Mannheim, Germany
+job : Business Solution Consultant
+
 skills:
   - Project Management
   - E-Commerce
