@@ -363,8 +363,8 @@ th {
 body {
   background-color: #eee;
   border-top: solid 5px #DF7401;
-  padding: 50px; }
-  @media all and (max-width: 1024px) {
+  padding: 50px 0px; }
+  @media all and (max-width: 920px) {
     body {
       padding: 30px; } }
   @media all and (max-width: 500px) {
@@ -373,7 +373,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto; }
 
 ul {
@@ -392,24 +392,18 @@ ul {
 
 .left {
   float: left;
-  width: 27%;
+  width: 300px;
   padding-right: 15px;
   position: relative; }
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 920px) {
     .left {
       float: none;
       width: 100%;
       padding-right: 0; }
       .left .widget-container {
-        width: 50%;
+        width: 100%;
         float: left;
-        padding-right: 15px; }
-        .left .widget-container:last-child {
-          padding-right: 0; }
-        .left .widget-container:nth-child(2) {
-          margin-left: 50%;
-          position: absolute;
-          bottom: 0; } }
+        padding-right: 0px; } }
   @media all and (max-width: 640px) {
     .left .widget-container {
       width: 100%;
@@ -423,29 +417,6 @@ ul {
     border-bottom: dashed 1px #ddd;
     padding-bottom: 15px;
     font-size: 16px; }
-  .left .skills .skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px; }
-    .left .skills .skill-list .skill {
-      background-color: #f1f1f1;
-      padding: 4px 7px;
-      font-size: 12px;
-      float: left;
-      margin-right: 3px;
-      margin-bottom: 3px;
-      border-radius: 3px;
-      line-height: 17px;
-      color: #555;
-      white-space: nowrap;
-      flex-grow: 1;
-      text-align: center; }
-      @media all and (max-width: 1024px) {
-        .left .skills .skill-list .skill {
-          background-color: #fff;
-          font-size: 14px;
-          width: 50%;
-          margin: 3px 0; } }
   .left .widget {
     background-color: #fff;
     padding: 15px;
@@ -463,17 +434,18 @@ ul {
       .left .widget.about-me .image {
         border-radius: 50%;
         width: 100px; }
-      .left .widget.about-me .location, .left .widget.about-me .academic-title {
+      .left .widget.about-me .location,
+      .left .widget.about-me .academic-title {
         color: #999; }
       .left .widget.about-me .email {
         margin-top: 15px; }
 
 .right {
-  width: 73%;
-  margin-left: 27%;
+  width: 600px;
+  margin-left: 300px;
   background-color: #fff;
   line-height: 22px; }
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 920px) {
     .right {
       width: 100%;
       margin-left: 0; } }
