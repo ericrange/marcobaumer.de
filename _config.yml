@@ -17,18 +17,17 @@ location: Mannheim, Germany
 job : Business Solution Consultant
 
 skills:
-  - Project Management
   - E-Commerce
-  - Enterprise Applications
-  - Data Mining
-  - Project Controlling
-  - SharePoint
   - E-Marketing
+  - Data Mining
+  - Scrum
+  - Product Owner
+  - Requirements Engineering
 
 vita:
   - company: BASF Business Services GmbH
     period: September 2015 - present
-    job: Business Solution Consultant E-Commerce
+    job: Business Solution Consultant
   - company: BASF Business Services GmbH
     period: October 2013 - August 2015
     job: Project Office
@@ -50,4 +49,4 @@ education:
     location: Mannheim, Germany
     studies: B.Sc. Business Informatics
 
-honorificSuffix: B.Sc. Business Informatics
+honorificSuffix: M.Sc. Business Informatics
